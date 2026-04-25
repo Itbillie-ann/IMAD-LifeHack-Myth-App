@@ -15,7 +15,7 @@ This Android Aoo presents users with a series  of true/false questions about myt
 3. Displays score
 4. Highlights incorrect answers
 
-##Technologies Used
+## Technologies Used
 - Java/Kotlin
 - Android Studio
 
