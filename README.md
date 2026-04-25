@@ -1,7 +1,7 @@
 # Myth / Life Hack Quiz App
 
 # Overview
-This Android Aoo presents users with a series  of true/false questions about myths and life
+This Android app presents users with a series  of true/false questions about myths and life
 
 ## Features
 - True/False quiz system
