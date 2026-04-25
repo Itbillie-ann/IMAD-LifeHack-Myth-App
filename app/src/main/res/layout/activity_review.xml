@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReviewActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#75D1F8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="155dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="136dp"
+            android:layout_marginEnd="16dp"
+            android:text="Myth"
+            android:textAlignment="textEnd"
+            android:textColor="#0568FB"
+            android:textSize="48sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/scrollViewContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="Or"
+            android:textColor="#002287"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/scrollViewContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.078" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="252dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Life Hack "
+            android:textColor="#0768B3"
+            android:textSize="48sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/scrollViewContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <!-- Added ScrollView here to hold your review text so it can scroll if needed -->
+        <ScrollView
+            android:id="@+id/scrollViewContainer"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonsLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6">
+
+            <LinearLayout
+                android:id="@+id/reviewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#5DB7F0"
+                android:orientation="vertical"
+                android:padding="20dp" />
+
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="83dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="62dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/scrollViewContainer"
+            app:layout_constraintEnd_toStartOf="@+id/textView12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11"
+            app:srcCompat="@drawable/pinky_removebg_preview" />
+
+        <LinearLayout
+            android:id="@+id/buttonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/imageView7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollViewContainer">
+
+            <Button
+                android:id="@+id/homeButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#318EF8"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Home"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toStartOf="@+id/hackButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/questionText"
+                app:strokeColor="#014A85"
+                app:strokeWidth="2dp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/restartButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#318EF8"
+                android:fontFamily="sans-serif-medium"
+                android:text="Restart"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toStartOf="@+id/hackButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/questionText"
+                app:strokeColor="#014A85"
+                app:strokeWidth="2dp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonsLayout"
+            app:srcCompat="@drawable/key_removebg_preview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6091F4"
+    tools:context=".ScoreActivity">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="155dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="24dp"
+        android:text="Myth"
+        android:textAlignment="textEnd"
+        android:textColor="#0568FB"
+        android:textSize="48sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/scoreText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Or"
+        android:textColor="#002287"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scoreText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.577"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="252dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Life Hack "
+        android:textColor="#9BD1FA"
+        android:textSize="48sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/scoreText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="337dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/reviewButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Score: 4/5\nMaster  Hacker!" />
+
+    <Button
+        android:id="@+id/reviewButton"
+        android:layout_width="291dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="320dp"
+        android:backgroundTint="#2E5DA2"
+        android:fontFamily="sans-serif-thin"
+        android:text="Review"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#052E81"
+        app:strokeWidth="2dp"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="155dp"
+        android:layout_height="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reviewButton"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/police_removebg_preview"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

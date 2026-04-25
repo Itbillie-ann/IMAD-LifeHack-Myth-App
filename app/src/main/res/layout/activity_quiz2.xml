@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress AndroidDomInspection -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#97CDF8"
+    tools:context="Quiz">
+
+    <androidx.constraintlayout.widget.Constraints
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#78B4E4"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/feedbackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
+
+    </androidx.constraintlayout.widget.Constraints>
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="336dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="168dp"
+        android:backgroundTint="#318EF8"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Next"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#014A85"
+        app:strokeWidth="2dp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/mythButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="Myth (False)"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        android:backgroundTint="#318EF8"
+        app:strokeColor="#014A85"
+        app:strokeWidth="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/hackButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionText"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/hackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="31dp"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        android:backgroundTint="@color/purple"
+        app:strokeColor="#014A85"
+        app:strokeWidth="2dp"
+        android:text="Hack (True)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mythButton"
+        app:layout_constraintTop_toBottomOf="@+id/questionText"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/questionText"
+        android:layout_width="386dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="41dp"
+        android:hint="Enter your question."
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/nextButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.315"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="148dp"
+        android:layout_height="138dp"
+        android:src="@drawable/bright_removebg_preview"
+        app:layout_constraintBottom_toTopOf="@+id/nextButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionText"
+        app:layout_constraintVertical_bias="0.741" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="179dp"
+        android:layout_height="49dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Life Hack "
+        android:textColor="#0543AB"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="3dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="166dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="200dp"
+        android:text="Myth"
+        android:textAlignment="textEnd"
+        android:textColor="#0568FB"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="65dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="188dp"
+        android:layout_marginBottom="7dp"
+        android:text="Or"
+        android:textColor="#002287"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

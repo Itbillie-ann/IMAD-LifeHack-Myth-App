@@ -1,0 +1,9 @@
+<shape xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ExtraText">
+
+    <solid android:color="@color/little_blue"/><![CDATA[
+
+    ]]><corners android:radius="0dp"/>  <!-- This is the key --><![CDATA[
+
+]]></shape>
