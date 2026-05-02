@@ -2,6 +2,7 @@ package com.example.lifehackapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -70,6 +71,13 @@ class QuizActivity : AppCompatActivity() {
         mythButton.setOnClickListener { checkAnswer(false) }
 
         nextButton.setOnClickListener {
+            // ---NEW FIX: Check if the user skipped the question ---
+            if (feedbackText.text.isEmpty()) {
+                val currentItem = currentQuiz[index]
+                val correctAnswerText = if (currentItem.isHack) "Hack ✅" else "Myth ❌"
+                val wrongItemText = "Question: ${currentItem.question}\nCorrect Answer: $correctAnswerText\n${currentItem.explanation}\n\n---\n\n"
+                wrongAnswersList.add(wrongItemText)
+        }
             index++
 
             if (index < currentQuiz.size) {
@@ -80,7 +88,7 @@ class QuizActivity : AppCompatActivity() {
                 intent.putExtra("score", score)
                 intent.putExtra("total", currentQuiz.size)
 
-                // 2. ADD THIS: Put the whole list of wrong answers into the intent
+                // Pass the whole list of wrong answers to the intent
                 intent.putStringArrayListExtra("wrongAnswers", ArrayList(wrongAnswersList))
 
                 startActivity(intent)
@@ -90,6 +98,7 @@ class QuizActivity : AppCompatActivity() {
     }
 
     fun loadQuestion() {
+        Log.d("QuizLogic","Loading question ${index + 1} of ${currentQuiz.size}")
         questionText.text = currentQuiz[index].question
     }
 
@@ -97,6 +106,7 @@ class QuizActivity : AppCompatActivity() {
         val currentItem = currentQuiz[index]
 
         if (userAnswer == currentItem.isHack) {
+            Log.d("QuizLogic", "User answered correctly. Score is now $score")
             feedbackText.text = "Correct! 🎉\n${currentItem.explanation}"
             score++
         } else {

@@ -29,7 +29,14 @@ class ScoreActivity : AppCompatActivity() {
         val scoreText = findViewById<TextView>(R.id.scoreText)
         val reviewButton = findViewById<Button>(R.id.reviewButton)
 
-        val message = if (score >= 4) "MasterHacker!" else "Keep practising!"
+        // --- NEW FIX: Updated grading logic for 20 questions ---
+        val message = when (score) {
+            20 -> "MasterHacker! Congratulations, you got everything right!🌟"
+            in 15..19 -> "Keep up the good work, you almost got it!\uD83D\uDCAA"
+            in 10..14 ->"Almost there, try harder next time!\uD83D\uDCDA"
+            else -> "You'll get it next time!\uD83E\uDDE0"
+        }
+        // ---------------------------------------------------------------------------------------
 
         scoreText.text = "Score: $score/$total\n$message"
 

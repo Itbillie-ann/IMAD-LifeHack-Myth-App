@@ -37,7 +37,8 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/textView9"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="HardcodedText,UnknownIdInLayout" />
 
         <TextView
             android:id="@+id/textView12"
@@ -52,7 +53,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.078" />
+            app:layout_constraintVertical_bias="0.078"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/textView11"
@@ -69,13 +71,14 @@
             app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="HardcodedText" />
 
-        <!-- Added ScrollView here to hold your review text so it can scroll if needed -->
+        <!-- CHANGED layout_height to 0dp so it fills the space properly -->
         <ScrollView
             android:id="@+id/scrollViewContainer"
             android:layout_width="383dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginStart="13dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
@@ -85,6 +88,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView6">
 
+            <!-- MOVED reviewLayout INSIDE the ScrollView and removed the absolute X/Y coordinates -->
             <LinearLayout
                 android:id="@+id/reviewLayout"
                 android:layout_width="match_parent"
@@ -97,17 +101,19 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="83dp"
-            android:layout_height="75dp"
+            android:layout_width="51dp"
+            android:layout_height="37dp"
             android:layout_marginStart="35dp"
             android:layout_marginTop="64dp"
             android:layout_marginEnd="62dp"
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toTopOf="@+id/scrollViewContainer"
             app:layout_constraintEnd_toStartOf="@+id/textView12"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11"
-            app:srcCompat="@drawable/pinky_removebg_preview" />
+            app:srcCompat="@drawable/pinky_removebg_preview"
+            tools:ignore="ContentDescription" />
 
         <LinearLayout
             android:id="@+id/buttonsLayout"
@@ -138,7 +144,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/questionText"
                 app:strokeColor="#014A85"
                 app:strokeWidth="2dp"
-                tools:ignore="HardcodedText" />
+                tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
                 android:id="@+id/restartButton"
@@ -156,23 +162,18 @@
                 app:layout_constraintTop_toBottomOf="@+id/questionText"
                 app:strokeColor="#014A85"
                 app:strokeWidth="2dp"
-                tools:ignore="HardcodedText" />
+                tools:ignore="ButtonStyle,HardcodedText" />
 
         </LinearLayout>
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="87dp"
-            android:layout_height="87dp"
-            android:layout_marginStart="310dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="14dp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonsLayout"
-            app:srcCompat="@drawable/key_removebg_preview" />
+            android:layout_width="60dp"
+            android:layout_height="66dp"
+            app:srcCompat="@drawable/key_removebg_preview"
+            tools:ignore="ContentDescription,MissingConstraints"
+            tools:layout_editor_absoluteX="337dp"
+            tools:layout_editor_absoluteY="661dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
