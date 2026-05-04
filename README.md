@@ -16,7 +16,7 @@ This Android app presents users with a series  of true/false questions about myt
 4. Highlights incorrect answers
 
 ## Video Presentation
-
+- https://www.youtube.com/watch?v=Wyl5hMpkua8
 
 ## Technologies Used
 - Java/Kotlin
